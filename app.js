@@ -15,5 +15,9 @@ app.get('/ahoy', (req, res) => {
 app.get('/spxp', (req, res) => {
   res.send('Yeah! This is SPXP PAGE !!!!')
 })
+
+app.get('/ahoy/:name', (req, res) => {
+  res.send(`Ahoy! ${req.params.name}`)
+})
 // 4. listen() เป็น function คล้ายๆ http module เพื่อเอาไว้ระบุว่า server จะรัน ด้วย port อะไร
 app.listen(3000)
